@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MMFitnessApp.MyProfilePage"
+  Title="My Profile Page">
+  
+ <!--GRID-->
+<Grid Padding="5,0" RowSpacing="1" ColumnSpacing="1">
+<Grid.ColumnDefinitions>
+    <ColumnDefinition Width="*"/>
+    <ColumnDefinition Width="*"/>
+</Grid.ColumnDefinitions>
+
+<Grid.RowDefinitions>
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="150"/>
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="*"/>
+    <RowDefinition Height="*"/>
+</Grid.RowDefinitions>
+
+    <!--First Name-->
+<Entry x:Name="FirstName"
+           Placeholder="First Name"
+           VerticalOptions="Center"
+           Grid.Column="0"
+           Grid.Row="0"
+           Grid.ColumnSpan="3"
+           FontSize="17"/>
+
+
+    <!--Last Name-->
+<Entry x:Name="LastName"
+           Placeholder="Last Name"
+           VerticalOptions="Center"
+           Grid.Column="0"
+           Grid.Row="1"
+           Grid.ColumnSpan="3"
+           FontSize="17"/>
+
+
+
+    <!--Prefered Name-->
+<Entry x:Name="PreferedName"
+           Placeholder="Prefered Name"
+           VerticalOptions="Center"
+           Grid.Column="0"
+           Grid.Row="2"
+           Grid.ColumnSpan="3"
+           FontSize="17"/>
+
+
+    <!--Weight, Height, Age-->
+<Entry x:Name="txtBoxWeight"
+           Placeholder="Weight in Pounds"
+           VerticalOptions="Center"
+           Grid.Column="0"
+           Grid.Row="3"
+           Grid.ColumnSpan="3"
+           Keyboard="Numeric"
+           FontSize="17"/>
+
+<Entry x:Name="txtBoxHeight"
+           Placeholder="Height in Inches"
+           VerticalOptions="Center"
+           Grid.Column="0"
+           Grid.Row="4"
+           Grid.ColumnSpan="3"
+           FontSize="17"/>
+
+<Entry x:Name="txtBoxAge"
+           Placeholder="Age"
+           VerticalOptions="Center"
+           Grid.Column="0"
+           Grid.Row="5"
+           Grid.ColumnSpan="3"
+           Keyboard="Numeric"
+           FontSize="17"/>
+
+
+    <!--Before Image-->
+
+    <Image x:Name="ImgProfile"
+           Source="Before.jpg"
+           Grid.Row="6"
+           Grid.ColumnSpan="3"
+           
+           HorizontalOptions="Center"/>
+
+
+
+     <!-- Buttons -->
+     <Button x:Name="btnBefore"
+                VerticalOptions="Center"
+                Text="Before"
+                HeightRequest="80"
+                FontSize="25"
+                TextColor="White"
+                BackgroundColor="DarkBlue"
+                Grid.Row="7"
+                Grid.Column="0"
+                CornerRadius="20"
+                Clicked="btnBefore_Clicked"/>
+
+
+     <Button x:Name="btnAfter"
+                VerticalOptions="Center"
+                HeightRequest="80"
+                Text="After"
+                TextColor="White"
+                BackgroundColor="DarkBlue"
+                FontSize="25"
+                Grid.Row="7"
+                Grid.Column="2"
+                CornerRadius="20"
+                Clicked="btnAfter_Clicked"/>
+
+    <Button x:Name="btnClear"
+            VerticalOptions="Center"
+            HeightRequest="80"
+            Text="Clear"
+            FontSize="25"
+            Grid.Row="8"
+            Grid.ColumnSpan="3"
+            FontAttributes="Bold"
+            Clicked="btnClear_Clicked"/>
+           
+
+
+        <Button x:Name="btnClose"
+                VerticalOptions="Center"
+                HeightRequest="80"
+                Text="Close"
+                FontAttributes="Bold"
+                FontSize="25"
+                Grid.Row="9"
+                Grid.ColumnSpan="3"
+                TextColor="White"
+                BackgroundColor="DarkGreen"
+                Clicked="btnClose_Clicked"/>
+
+</Grid>
+<!--END GRID-->
+
+ 
+</ContentPage>

@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MMFitnessApp.MyBMRPage"
+             Title="My BMR Page">
+    <Grid Padding="5,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--PICKER ACTIVITY-->
+        <Picker x:Name="PckActivity"
+                Title="Pick an Activity Level"
+                Grid.Row="0"
+                Grid.ColumnSpan="2">
+            <Picker.Items>
+                <x:String>Little to No Activity</x:String>
+                <x:String>Light Activity (1-3 days per week)</x:String>
+                <x:String>Moderate Activity (3-5 days per week)</x:String>
+                <x:String>Heavy Activity (6-7 days per week)</x:String>
+                <x:String>Very Heavy Activity (twice per day)</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <!--PICKER GENDER-->
+        <Picker x:Name="PckGender"
+                Title="Select Gender"
+                Grid.Row="1"
+                Grid.ColumnSpan="2">
+            <Picker.Items>
+                <x:String>Female</x:String>
+                <x:String>Male</x:String>
+            </Picker.Items>
+        </Picker>
+
+
+        <!--FEMALE BMR-->
+        <Label Text="Female BMR: "
+               FontSize="18"
+               HorizontalOptions="End"
+               VerticalOptions="Center"
+               Grid.Row="2"
+               Grid.Column="0"/>
+
+        <Label x:Name="lblFemaleResults"
+               Text="Results..."
+               FontSize="18"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+               Grid.Row="2"
+               Grid.Column="1"/>
+
+        <!--MALE BMR-->
+        <Label Text="Male BMR: "
+               FontSize="18"
+               HorizontalOptions="End"
+               VerticalOptions="Center"
+               Grid.Row="3"
+               Grid.Column="0"/>
+
+        <Label x:Name="lblMaleResults"
+               Text="Results..."
+               FontSize="19"
+               HorizontalOptions="Start"
+               VerticalOptions="Center"
+               Grid.Row="3"
+               Grid.Column="1"/>
+
+
+        <!--BUTTONS-->
+        <Button x:Name="BtnCalculate"
+                Text="Calculate BMR"
+                FontSize="25"
+                FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand"
+                HeightRequest="100"
+                BackgroundColor="DarkGreen"
+                TextColor="White"
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                Margin="5,0"
+                Clicked="BtnCalculate_Clicked"/>
+
+        <Button x:Name="btnClose"
+                VerticalOptions="CenterAndExpand"
+                HeightRequest="100"
+                Text="Close"
+                FontAttributes="Bold"
+                FontSize="25"
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Margin="5,0"
+                Clicked="btnClose_Clicked"/>
+
+    </Grid>
+
+</ContentPage>

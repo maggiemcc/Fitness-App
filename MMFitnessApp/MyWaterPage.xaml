@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MMFitnessApp.MyWater">
+
+ <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <BoxView BackgroundColor="DarkBlue"
+               Grid.ColumnSpan="2"/>
+
+        <Label Text="My Water Count"
+               FontSize="30"
+               TextColor="White"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Grid.Row="0"
+               Grid.ColumnSpan="2"/>
+
+        <Label x:Name="LblDate"
+               Text="Date: "
+               Grid.Row="1"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               FontSize="30"
+               Grid.ColumnSpan="2"/>
+
+        <Label x:Name="LblAddWater"
+               Text="Add to Water"
+               FontSize="30"
+               Grid.Row="2"
+               HorizontalOptions="Center"
+               Grid.ColumnSpan="2"/>
+
+
+              <StackLayout x:Name="SLWater"
+                 Orientation="Horizontal"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center"
+                 Margin="10,0,0,10"
+                 Grid.Row="3"
+                 Grid.ColumnSpan="2">
+        </StackLayout>
+
+
+
+        <Button x:Name="BtnAddWater"
+                Text="Add Water"
+                BackgroundColor="DarkGreen"
+                TextColor="white"
+                FontAttributes="Bold"
+                Grid.Row="5"
+                Grid.Column="0"
+                FontSize="30"
+                Clicked="BtnAddWater_Clicked"/>
+
+        <Button x:Name="BtnClose"
+                Text="Close"
+                FontAttributes="Bold"
+                Grid.Row="5"
+                Grid.Column="1"
+                FontSize="30"
+                Clicked="BtnClose_Clicked"/>
+
+ </Grid>
+</ContentPage>

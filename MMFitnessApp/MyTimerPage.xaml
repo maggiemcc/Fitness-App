@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MMFitnessApp.MyTimerPage"
+             Title="Maggie's Exercise Timer">
+<Grid>
+    <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="200"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+
+    <Label Text="Maggie's Simple Timer"
+           HorizontalOptions="Center"
+           VerticalOptions="Center"
+           TextColor="DarkBlue"
+           FontSize="25"
+           Grid.Row="0"
+           Grid.ColumnSpan="2"/>
+
+    <Frame BorderColor="DarkBlue" 
+        CornerRadius="30"
+        HasShadow="True"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Grid.Row="1"
+        Grid.ColumnSpan="2" 
+        Margin="10">
+
+            <!--Timer Label-->
+            <Label x:Name="LblTimer"
+            Text="00:00"
+            FontSize="75"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
+    </Frame>
+
+
+    <Label Text="Start Time:"
+           HorizontalOptions="End"
+           VerticalOptions="Center"
+           FontSize="25"
+           Grid.Row="2"
+           Grid.Column="0"/>
+
+    <Entry x:Name="StartTimeEntry"
+           FontSize="25"
+           Placeholder="Enter Time"
+           VerticalOptions="Center"
+           HorizontalOptions="Start"
+           Grid.Row="2"
+           Grid.Column="1"/>
+
+    <Label Text="Up or Down:"
+           HorizontalOptions="End"
+           VerticalOptions="Center"
+           FontSize="25"
+           Grid.Row="3"
+           Grid.Column="0"/>
+
+    <!--PICKER GENDER-->
+    <Picker x:Name="PckDirection"
+            Title="Choose Direction"
+            Grid.Row="3"
+            Grid.Column="1"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            FontSize="25">
+        <Picker.Items>
+            <x:String>Up</x:String>
+            <x:String>Down</x:String>
+        </Picker.Items>
+    </Picker>
+
+
+    <Button x:Name="BtnStart"
+            Text="Start"
+            FontSize="25"
+            FontAttributes="Bold"
+            Grid.Row="4"
+            Grid.Column="0"
+            Margin="5,5"
+            BackgroundColor="DarkGreen"
+            TextColor="White"
+            Clicked="BtnStart_Clicked"/>
+
+    <Button x:Name="BtnClose"
+            Text="Close"
+            FontSize="25"
+            FontAttributes="Bold"
+            Grid.Row="4"
+            Grid.Column="1"
+            Margin="5,5"
+            Clicked="BtnClose_Clicked"/>
+
+    <Button x:Name="BtnLapTime"
+            Text="Get Lap Time"
+            FontSize="25"
+            FontAttributes="Bold"
+            Grid.Row="5"
+            Grid.ColumnSpan="2"
+            Margin="5,5"
+            BackgroundColor="DarkGreen"
+            TextColor="White"
+            Clicked="BtnLapTime_Clicked"/>
+
+    <Label x:Name="LblResults"
+           Text="Lap..."
+           HorizontalOptions="Start"
+           VerticalOptions="Center"
+           FontSize="18"
+           Grid.Row="6"
+           Grid.Column="0"
+           Grid.ColumnSpan="2"/>
+</Grid>
+
+</ContentPage>

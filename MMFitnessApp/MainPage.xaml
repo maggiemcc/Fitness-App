@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="MMFitnessApp.MainPage"
+  Title="Maggie's Fitness App">
+    
+    <Grid Padding="5,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- WELCOME MESSAGE LABEL -->
+        <Label x:Name="lblMessage"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Grid.Column="0"
+               Grid.Row="0"
+               Grid.ColumnSpan="2"
+               Text="Maggie, welcome to your fitness app!"
+               HorizontalTextAlignment="Center"
+               FontSize="25"/>
+
+        <!-- DATE -->
+        <Label x:Name="lblDate"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Grid.Column="0"
+               Grid.Row="1"
+               Grid.ColumnSpan="2"
+               Text="Today's Date: "
+               FontSize="25"/>
+
+
+
+        <!-- WELCOME BUTTON -->
+        <!--<Button x:Name="btnWelcome"
+                Text="Welcome Maggie"
+                FontSize="25"
+                VerticalOptions="Center"
+                HeightRequest="200"
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                BackgroundColor="SkyBlue"
+                TextColor="White"
+                FontAttributes="Bold"
+                Margin="10"
+                Clicked="btnWelcome_Clicked"/>-->
+
+        <!-- PROFILE BUTTON -->
+        <Button x:Name="btnProfile"
+                Text="My Profile"
+                FontSize="25"
+                VerticalOptions="Center"
+                HeightRequest="200"
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                BackgroundColor="SkyBlue"
+                TextColor="White"
+                FontAttributes="Bold"
+                Margin="10"
+                Clicked="btnProfile_Clicked"/>
+
+        <!-- BMR BUTTON -->
+        <Button x:Name="btnBmr"
+                Text="My BMR Page"
+                FontSize="25"
+                VerticalOptions="Center"
+                HeightRequest="200"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                BackgroundColor="DeepSkyBlue"
+                TextColor="white"
+                FontAttributes="Bold"
+                Margin="10"
+                Clicked="btnBmr_Clicked"/>
+
+        <!-- Timer BUTTON -->
+        <Button x:Name="btnTimer"
+                Text="Simple Timer"
+                FontSize="25"
+                VerticalOptions="Center"
+                HeightRequest="200"
+                Grid.Row="4"
+                Grid.ColumnSpan="2"
+                BackgroundColor="Blue"
+                TextColor="White"
+                FontAttributes="Bold"
+                Margin="10"
+                Clicked="btnTimer_Clicked"/>
+
+        <!-- Water BUTTON -->
+        <Button x:Name="btnMyWater"
+                Text="My Water"
+                FontSize="25"
+                VerticalOptions="Center"
+                HeightRequest="200"
+                Grid.Row="5"
+                Grid.ColumnSpan="2"
+                BackgroundColor="MediumBlue"
+                TextColor="White"
+                FontAttributes="Bold"
+                Margin="10"
+                Clicked="btnMyWater_Clicked"/>
+
+          <!-- Food Details BUTTON -->
+        <Button x:Name="btnFood"
+                Text="Food Details"
+                FontSize="25"
+                VerticalOptions="Center"
+                HeightRequest="200"
+                Grid.Row="6"
+                Grid.ColumnSpan="2"
+                BackgroundColor="MidnightBlue"
+                TextColor="White"
+                FontAttributes="Bold"
+                Margin="10"
+                Clicked="btnFood_Clicked"/>
+
+    </Grid>
+
+</ContentPage>
